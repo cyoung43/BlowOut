@@ -14,7 +14,7 @@ namespace BlowOut.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Rentals()
         {
             ViewBag.Message = ".";
 
@@ -23,9 +23,8 @@ namespace BlowOut.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
 
-            return View();
+            return RedirectToAction("Index", "Contact");
         }
     }
 }
