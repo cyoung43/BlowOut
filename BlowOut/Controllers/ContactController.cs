@@ -25,7 +25,7 @@ namespace BlowOut.Controllers
             //make sure email is valid
             if (email.Contains('@'))
             {
-                ViewBag.Email = "Thank you, " + name + ". We will email you at <u>" + email + "</u>";
+                ViewBag.Email = "Thank you, " + name + ". We will email you at <a>" + email + "</a>";
 
                 //write body message
                 string body = name + ", <br><br>Thank you for your interest. We will be in touch shortly.<br><br> Gary Anderson<br>BlowOut CEO";
