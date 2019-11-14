@@ -24,6 +24,10 @@ namespace BlowOut.Controllers
         {
 
             return RedirectToAction("Index", "Contact");
+
+            //My name is bonnie and I like tacos
         }
     }
 }
+
+//This is me talking
