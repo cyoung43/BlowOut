@@ -16,7 +16,6 @@ namespace BlowOut.Controllers
 
         public ActionResult Rentals()
         {
-            ViewBag.Message = ".";
 
             return View();
         }
