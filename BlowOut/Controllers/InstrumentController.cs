@@ -14,6 +14,18 @@ namespace BlowOut.Controllers
             return View();
         }
 
+        public ActionResult NewTrumpet()
+        {
+            ViewBag.New = "New: $55 per month";
+            return View("Trumpet");
+        }
+
+        public ActionResult UsedTrumpet()
+        {
+            ViewBag.Used = "Used: $35 per month";
+            return View("Trumpet");
+        }
+
         public ActionResult Tuba()
         {
             return View();
