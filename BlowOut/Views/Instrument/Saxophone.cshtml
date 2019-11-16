@@ -5,3 +5,12 @@
 
 <h2>Saxophone</h2>
 
+<img src="~/Content/Images/sax2.jpg" class="myInstImage" />
+<div>
+    <input type="button" value="New" class="button button2" onclick="location.href='@Url.Action("SaxophoneNew")'" />
+    <input type="button" value="Used" class="button button2" onclick="location.href='@Url.Action("SaxophoneUsed")'" />
+</div>
+<div>
+    <h3>Price</h3><br />
+    <p>@ViewBag.PriceInfo</p>
+</div>

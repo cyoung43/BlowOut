@@ -5,3 +5,12 @@
 
 <h2>Trombone</h2>
 
+<img src="~/Content/Images/trombone2.jpg" class="myInstImage" />
+<div>
+    <input type="button" value="New" class="button button2" onclick="location.href='@Url.Action("TromboneNew")'" />
+    <input type="button" value="Used" class="button button2" onclick="location.href='@Url.Action("TromboneUsed")'" />
+</div>
+<div>
+    <h3>Price</h3><br />
+    <p>@ViewBag.PriceInfo</p>
+</div>
