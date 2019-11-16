@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewBag.Title = "Rentals";
+    ViewBag.Title = "Select an Instrument to Begin";
 }
 
 <h2>Rentals</h2>
@@ -12,16 +12,16 @@
     <center>
         <div class="row">
             <div class="column container">
-                <img src="~/Content/Images/trumpet.jpg" class="myInstImage" />
-                <img src="~/Content/Images/trombone2.jpg" class="myInstImage" />
-                <img src="~/Content/Images/tuba2.PNG" class="myInstImage" />
-            </div>
+                <a href="@Url.Action("Trumpet", "Instrument")"><img src="~/Content/Images/trumpet.jpg" class="myInstImage" /></a>
+                <a href="@Url.Action("Trombone", "Instrument")"><img src="~/Content/Images/trombone2.jpg" class="myInstImage" /></a>
+                <a href="@Url.Action("Tuba", "Instrument")"><img src="~/Content/Images/tuba2.PNG" class="myInstImage" /></a>
+</div>
         </div>
         <div class="row">
             <div class="column">
-                <img src="~/Content/Images/clarinet.jpg" class="myInstImage" />
-                <img src="~/Content/Images/flute.jpg" class="myInstImage" />
-                <img src="~/Content/Images/sax2.jpg" class="myInstImage"  />
+                <a href="@Url.Action("Clarinet", "Instrument")"><img src="~/Content/Images/clarinet.jpg" class="myInstImage" /></a>
+                <a href="@Url.Action("Flute", "Instrument")"><img src="~/Content/Images/flute.jpg" class="myInstImage" /></a>
+                <a href="@Url.Action("Saxophone", "Instrument")"><img src="~/Content/Images/sax2.jpg" class="myInstImage" /></a>
             </div>
         </div>
     </center>

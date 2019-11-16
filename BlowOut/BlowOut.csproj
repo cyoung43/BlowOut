@@ -122,6 +122,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InstrumentController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -174,6 +175,12 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\Home\Rentals.cshtml" />
+    <Content Include="Views\Instrument\Trumpet.cshtml" />
+    <Content Include="Views\Instrument\Saxophone.cshtml" />
+    <Content Include="Views\Instrument\Flute.cshtml" />
+    <Content Include="Views\Instrument\Clarinet.cshtml" />
+    <Content Include="Views\Instrument\Trombone.cshtml" />
+    <Content Include="Views\Instrument\Tuba.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
