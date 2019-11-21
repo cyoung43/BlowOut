@@ -14,15 +14,15 @@ namespace BlowOut.Controllers
             return View();
         }
 
-        public ActionResult TrumpetNew()
+        public ActionResult NewTrumpet()
         {
-            ViewBag.PriceInfo = "$55 a month";
+            ViewBag.PriceInfo = "New: $55 per month";
             return View("Trumpet");
         }
 
-        public ActionResult TrumpetUsed()
+        public ActionResult UsedTrumpet()
         {
-            ViewBag.PriceInfo = "$25 a month";
+            ViewBag.PriceInfo = "Used: $25 per month";
             return View("Trumpet");
         }
 
@@ -33,13 +33,13 @@ namespace BlowOut.Controllers
 
         public ActionResult TubaNew()
         {
-            ViewBag.PriceInfo = "$70 a month";
+            ViewBag.PriceInfo = "New: $70 a month";
             return View("Tuba");
         }
 
         public ActionResult TubaUsed()
         {
-            ViewBag.PriceInfo = "$50 a month";
+            ViewBag.PriceInfo = "Used: $50 a month";
             return View("Tuba");
         }
 
@@ -50,13 +50,13 @@ namespace BlowOut.Controllers
 
         public ActionResult TromboneNew()
         {
-            ViewBag.PriceInfo = "$60 a month";
+            ViewBag.PriceInfo = "New: $60 a month";
             return View("Trombone");
         }
 
         public ActionResult TromboneUsed()
         {
-            ViewBag.PriceInfo = "$35 a month";
+            ViewBag.PriceInfo = "Used: $35 a month";
             return View("Trombone");
         }
 
@@ -67,13 +67,13 @@ namespace BlowOut.Controllers
 
         public ActionResult ClarinetNew()
         {
-            ViewBag.PriceInfo = "$35 a month";
+            ViewBag.PriceInfo = "New: $35 a month";
             return View("Clarinet");
         }
 
         public ActionResult ClarinetUsed()
         {
-            ViewBag.PriceInfo = "$27 a month";
+            ViewBag.PriceInfo = "Used: $27 a month";
             return View("Clarinet");
         }
 
@@ -84,13 +84,13 @@ namespace BlowOut.Controllers
 
         public ActionResult FluteNew()
         {
-            ViewBag.PriceInfo = "$40 a month";
+            ViewBag.PriceInfo = "New: $40 a month";
             return View("Flute");
         }
 
         public ActionResult FluteUsed()
         {
-            ViewBag.PriceInfo = "$25 a month";
+            ViewBag.PriceInfo = "Used: $25 a month";
             return View("Flute");
         }
 
@@ -101,13 +101,13 @@ namespace BlowOut.Controllers
 
         public ActionResult SaxophoneNew()
         {
-            ViewBag.PriceInfo = "$42 a month";
+            ViewBag.PriceInfo = "New: $42 a month";
             return View("Saxophone");
         }
 
         public ActionResult SaxophoneUsed()
         {
-            ViewBag.PriceInfo = "$30 a month";
+            ViewBag.PriceInfo = "Used: $30 a month";
             return View("Saxophone");
         }
     }

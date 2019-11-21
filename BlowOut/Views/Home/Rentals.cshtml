@@ -1,29 +1,33 @@
 ﻿
 @{
-    ViewBag.Title = "Select an Instrument to Begin";
+    ViewBag.Title = "Rentals";
 }
 
-<h2>Rentals</h2>
+
 <head>
     <link href="~/Content/MyStyles.css" rel="stylesheet" />
 </head>
+<body class="backgroundImage">
+    <br /><br /><br />
+    <div class="jumbotron">
+        <h2>Select an Instrument to Begin</h2>
+        <center>
+            <div class="row">
+                <div class="column container">
+                    <a href="@Url.Action("Trumpet", "Instrument")"><img src="~/Content/Images/trumpet.jpg" class="myInstImage" /></a>
+                    <a href="@Url.Action("Trombone", "Instrument")"><img src="~/Content/Images/trombone2.jpg" class="myInstImage" /></a>
+                    <a href="@Url.Action("Tuba", "Instrument")"><img src="~/Content/Images/tuba2.PNG" class="myInstImage" /></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <a href="@Url.Action("Clarinet", "Instrument")"><img src="~/Content/Images/clarinet.jpg" class="myInstImage" /></a>
+                    <a href="@Url.Action("Flute", "Instrument")"><img src="~/Content/Images/flute.jpg" class="myInstImage" /></a>
+                    <a href="@Url.Action("Saxophone", "Instrument")"><img src="~/Content/Images/sax2.jpg" class="myInstImage" /></a>
+                </div>
+            </div>
+        </center>
+    </div>
 
-<div>
-    <center>
-        <div class="row">
-            <div class="column container">
-                <a href="@Url.Action("Trumpet", "Instrument")"><img src="~/Content/Images/trumpet.jpg" class="myInstImage" /></a>
-                <a href="@Url.Action("Trombone", "Instrument")"><img src="~/Content/Images/trombone2.jpg" class="myInstImage" /></a>
-                <a href="@Url.Action("Tuba", "Instrument")"><img src="~/Content/Images/tuba2.PNG" class="myInstImage" /></a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="column">
-                <a href="@Url.Action("Clarinet", "Instrument")"><img src="~/Content/Images/clarinet.jpg" class="myInstImage" /></a>
-                <a href="@Url.Action("Flute", "Instrument")"><img src="~/Content/Images/flute.jpg" class="myInstImage" /></a>
-                <a href="@Url.Action("Saxophone", "Instrument")"><img src="~/Content/Images/sax2.jpg" class="myInstImage" /></a>
-            </div>
-        </div>
-    </center>
-</div>
+</body>
 
