@@ -20,6 +20,7 @@ namespace BlowOut.Controllers
         }
 
         //the route receives an email parameter first to handle user errors with the closing slash '/'
+        [Route("email/{email}/{name}")]
         public ActionResult Email(string email, string name)
         {
             //make sure email is valid
