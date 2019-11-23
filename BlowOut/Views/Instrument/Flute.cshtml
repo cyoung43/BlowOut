@@ -3,20 +3,26 @@
     ViewBag.Title = "Flute";
 }
 
-<h2>Flute</h2>
-
-<div class="jumbotron">
-
-    <input value="New" type="button" class="btn btn-primary" onclick="location.href='@Url.Action("FluteNew", "Instrument")'" /><br /><br />
-    <input value="Used" type="button" class="btn btn-primary" onclick="location.href='@Url.Action("FluteUsed", "Instrument")'" />
-    <br /><br />
-    <h3>@ViewBag.PriceInfo</h3>
-
-</div>
-<p class="text-muted">
-    <ul class="text-muted">
-        <li>Once the <strong>18 months</strong> has been achieved, you will own the instrument. </li>
-        <li>If you return it at any time before 3 months there will be a <strong>$200</strong> re-stocking fee. </li>
-        <li>If you return it after 3 months you <string>forfeit any</string> any equity in the instrument.</li>
-    </ul>
-</p>
+<h2>Flirty Flutes</h2>
+<body class="backgroundImage">
+    <div class="jumbotron">
+        <center>
+            <h4>New: $40/month</h4>
+            <h4>Used: $25/month</h4>
+            <img src="~/Content/Images/flute.jpg" class="myInstImage"/><br /><br />
+            <input value="New" type="button" class="btn btn-primary" onclick="location.href='@Url.Action("FluteNew", "Instrument")'" />
+            <input value="Used" type="button" class="btn btn-primary" onclick="location.href='@Url.Action("FluteUsed", "Instrument")'" />
+            <br /><br />
+            <h3>@ViewBag.PriceInfo</h3>
+        </center>
+        
+        <p class="text-muted">
+            <ul class="text-muted">
+                <li>Once the <strong>18 months</strong> has been achieved, you will own the instrument. </li>
+                <li>If you return it at any time before 3 months there will be a <strong>$200</strong> re-stocking fee. </li>
+                <li>If you return it after 3 months you <string>forfeit any</string> any equity in the instrument.</li>
+            </ul>
+        </p>
+    </div>
+    
+</body>

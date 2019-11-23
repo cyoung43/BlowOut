@@ -28,6 +28,10 @@ namespace BlowOut.Controllers
             //My name is bonnie and I like tacos
         }
 
+        public ActionResult About()
+        {
+            return View();
+        }
     }
 }
 

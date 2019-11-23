@@ -1,7 +1,47 @@
-﻿@{
-    ViewBag.Title = "About";
+﻿
+@{
+    ViewBag.Title = "About Us";
 }
-<h2>@ViewBag.Title.</h2>
+<h2>@ViewBag.Title</h2>
 <h3>@ViewBag.Message</h3>
-
-<p>Use this area to provide additional information.</p>
+<link href="~/Content/MyStyles.css" rel="stylesheet" />
+<body class="backgroundImage">
+    <div class="myOpacity jumbotron">
+        <h2>Founder - Gary Anderson</h2>
+        <img src="~/Content/Images/greg-anderson.jpg" style="opacity: 100; display: block; margin-left: auto; margin-right: auto; width: 50%;" />
+        <p style="text-align:center">
+            Gary Anderson is a world renown recording artist. He is best known for his hits
+            "M-M-M-Model", "Sexy Tech Talk" and no one can forget his old timey toon "Depends."
+            Just like the brilliant BYU IS professor that he is commonly mistaken for he also has a
+            passion for teaching, mostly instrumental music. He started this instrument Blow Out company
+            so that he can control how the world views every model of instrument!
+        </p>
+    </div>
+    <div class="jumbotron">
+        <h2>Mission</h2>
+        <p>Blow Out Instrument Rentals has a 3 tier mission:</p>
+        <ol style="list-style-type: upper-roman; font-size: 14pt;">
+            <li>
+                <strong>M:</strong> Model instruments for the world!
+            </li>
+            <li>
+                <strong>V:</strong> View the best concerts from our venues!
+            </li>
+            <li>
+                <strong>C:</strong> Control your own musical success!
+            </li>
+        </ol>
+    </div>
+    <div class="jumbotron">
+        <h2>History</h2>
+        <p>
+            Blow Out Instrument Rentals was started by Gary in the year 2002.
+            He was fresh off recording his hit "ViewBag" and was at the peak of his
+            recording artist career. After all the success he had he wanted to give
+            back by starting a business that would allow people to rent or buy
+            instruments at a very affordable price. His business took off, growing to
+            the multi-billion-dollar company that it is today. Along with instruments
+            Blow Out Instruments is also known for its book "Learning Music in the Key of C#."
+        </p>
+    </div>
+</body>

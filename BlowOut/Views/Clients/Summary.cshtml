@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "Order Details";
+}
+
+<body class="backgroundImage">
+    <div class="jumbotron">
+        <h2>Instrument Confirmation</h2><br /><br />
+        <h4>Thank you!</h4>
+
+        <p>
+            @ViewBag.Client.FirstName, your recent @{
+                if (ViewBag.Instrument.Type == "New")
+                {
+                    <strong>order </strong>
+                }
+                else
+                {
+                    <strong>rental </strong>
+                }
+            }
+            has been placed.
+        </p>
+        <table>
+            <tr>
+                <td>Order Number: </td>
+                <td>    @ViewBag.Client.ClientID</td>
+            </tr>
+            <tr>
+                <td>Instrument: </td>
+                <td>    @ViewBag.Instrument.Description</td>
+            </tr>
+            <tr>
+                <td>Type: </td>
+                <td>    @ViewBag.Instrument.Type</td>
+            </tr>
+            <tr>
+                <td>Monthly Fee: </td>
+                <td>    $@ViewBag.Instrument.Price.00</td>
+            </tr>
+            <tr>
+                <td>    18 Month Total: </td>
+                <td>
+                    @{
+                        int month = 18;
+                        int price, total;
+                        price = ViewBag.Instrument.Price;
+                        total = month * price;
+                    }
+                        $@total.00
+                </td>
+            </tr>
+        </table>
+        <img src="@Url.Content(ViewBag.Instrument.PicURL)" class="myInstImage"/>
+    </div>
+</body>

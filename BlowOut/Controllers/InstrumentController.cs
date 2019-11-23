@@ -3,27 +3,46 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using BlowOut.Models;
+using System.Data.Entity;
+using BlowOut.DAL;
 
 namespace BlowOut.Controllers
 {
+
     public class InstrumentController : Controller
     {
+        private RentalsContext db = new RentalsContext();
+
         // GET: Instrument
         public ActionResult Trumpet()
         {
+
             return View();
         }
 
         public ActionResult NewTrumpet()
         {
-            ViewBag.PriceInfo = "New: $55 per month";
-            return View("Trumpet");
+
+            //get new pictures
+            //set up instrument in database
+            var entity = new Instrument { Description = "Trumpet", PicURL = "~/Content/Images/trumpet2.jpg", Price = 55, Type = "New" };
+            db.Instruments.Add(entity);
+            db.SaveChanges();
+
+            //go to client method
+            return RedirectToAction("Create", "Clients");
         }
 
         public ActionResult UsedTrumpet()
         {
-            ViewBag.PriceInfo = "Used: $25 per month";
-            return View("Trumpet");
+            //set up instrument in database
+            var entity = new Instrument { Description = "Trumpet", PicURL = "~/Content/Images/trumpet2.jpg", Price = 25, Type = "Used" };
+            db.Instruments.Add(entity);
+            db.SaveChanges();
+
+            //go to client method
+            return RedirectToAction("Create", "Clients");
         }
 
         public ActionResult Tuba()
@@ -33,14 +52,24 @@ namespace BlowOut.Controllers
 
         public ActionResult TubaNew()
         {
-            ViewBag.PriceInfo = "New: $70 a month";
-            return View("Tuba");
+            //set up instrument in database
+            var entity = new Instrument { Description = "Tuba", PicURL = "~/Content/Images/tuba3.jpg", Price = 70, Type = "New" };
+            db.Instruments.Add(entity);
+            db.SaveChanges();
+
+            //go to client method
+            return RedirectToAction("Create", "Clients");
         }
 
         public ActionResult TubaUsed()
         {
-            ViewBag.PriceInfo = "Used: $50 a month";
-            return View("Tuba");
+            //set up instrument in database
+            var entity = new Instrument { Description = "Tuba", PicURL = "~/Content/Images/tuba3.jpg", Price = 50, Type = "Used" };
+            db.Instruments.Add(entity);
+            db.SaveChanges();
+
+            //go to client method
+            return RedirectToAction("Create", "Clients");
         }
 
         public ActionResult Trombone()
@@ -50,14 +79,24 @@ namespace BlowOut.Controllers
 
         public ActionResult TromboneNew()
         {
-            ViewBag.PriceInfo = "New: $60 a month";
-            return View("Trombone");
+            //set up instrument in database
+            var entity = new Instrument { Description = "Trombone", PicURL = "~/Content/Images/trombone3.jpg", Price = 60, Type = "New" };
+            db.Instruments.Add(entity);
+            db.SaveChanges();
+
+            //go to client method
+            return RedirectToAction("Create", "Clients");
         }
 
         public ActionResult TromboneUsed()
         {
-            ViewBag.PriceInfo = "Used: $35 a month";
-            return View("Trombone");
+            //set up instrument in database
+            var entity = new Instrument { Description = "Trombone", PicURL = "~/Content/Images/trombone3.jpg", Price = 35, Type = "Used" };
+            db.Instruments.Add(entity);
+            db.SaveChanges();
+
+            //go to client method
+            return RedirectToAction("Create", "Clients");
         }
 
         public ActionResult Clarinet()
@@ -67,14 +106,24 @@ namespace BlowOut.Controllers
 
         public ActionResult ClarinetNew()
         {
-            ViewBag.PriceInfo = "New: $35 a month";
-            return View("Clarinet");
+            //set up instrument in database
+            var entity = new Instrument { Description = "Clarinet", PicURL = "~/Content/Images/clarinet2.jpg", Price = 35, Type = "New" };
+            db.Instruments.Add(entity);
+            db.SaveChanges();
+
+            //go to client method
+            return RedirectToAction("Create", "Clients");
         }
 
         public ActionResult ClarinetUsed()
         {
-            ViewBag.PriceInfo = "Used: $27 a month";
-            return View("Clarinet");
+            //set up instrument in database
+            var entity = new Instrument { Description = "Clarinet", PicURL = "~/Content/Images/clarinet2.jpg", Price = 27, Type = "Used" };
+            db.Instruments.Add(entity);
+            db.SaveChanges();
+
+            //go to client method
+            return RedirectToAction("Create", "Clients");
         }
 
         public ActionResult Flute()
@@ -84,14 +133,24 @@ namespace BlowOut.Controllers
 
         public ActionResult FluteNew()
         {
-            ViewBag.PriceInfo = "New: $40 a month";
-            return View("Flute");
+            //set up instrument in database
+            var entity = new Instrument { Description = "Flute", PicURL = "~/Content/Images/flute2.jpg", Price = 40, Type = "New" };
+            db.Instruments.Add(entity);
+            db.SaveChanges();
+
+            //go to client method
+            return RedirectToAction("Create", "Clients");
         }
 
         public ActionResult FluteUsed()
         {
-            ViewBag.PriceInfo = "Used: $25 a month";
-            return View("Flute");
+            //set up instrument in database
+            var entity = new Instrument { Description = "Flute", PicURL = "~/Content/Images/flute2.jpg", Price = 25, Type = "Used" };
+            db.Instruments.Add(entity);
+            db.SaveChanges();
+
+            //go to client method
+            return RedirectToAction("Create", "Clients");
         }
 
         public ActionResult Saxophone()
@@ -101,14 +160,24 @@ namespace BlowOut.Controllers
 
         public ActionResult SaxophoneNew()
         {
-            ViewBag.PriceInfo = "New: $42 a month";
-            return View("Saxophone");
+            //set up instrument in database
+            var entity = new Instrument { Description = "Saxophone", PicURL = "~/Content/Images/saxophone2.jpg", Price = 42, Type = "New" };
+            db.Instruments.Add(entity);
+            db.SaveChanges();
+
+            //go to client method
+            return RedirectToAction("Create", "Clients");
         }
 
         public ActionResult SaxophoneUsed()
         {
-            ViewBag.PriceInfo = "Used: $30 a month";
-            return View("Saxophone");
+            //set up instrument in database
+            var entity = new Instrument { Description = "Saxophone", PicURL = "~/Content/Images/saxophone2.jpg", Price = 30, Type = "Used" };
+            db.Instruments.Add(entity);
+            db.SaveChanges();
+
+            //go to client method
+            return RedirectToAction("Create", "Clients");
         }
     }
 }
