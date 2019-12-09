@@ -3,6 +3,7 @@ using BlowOut.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 
@@ -25,5 +26,27 @@ namespace BlowOut.Controllers
 
             return View(clientOrders);
         }
+
+        public ActionResult Delete(int? id)
+        {
+            
+            Instrument instrument = db.Instruments.Find(id);
+
+            int cID = instrument.ClientID;
+
+            Client client = db.Clients.Find(cID);
+
+            db.Database.ExecuteSqlCommand(
+                "UPDATE Instruments " +
+                "SET ClientID = null " +
+                "WHERE InstrumentID = " + id + ";"
+                );
+
+            db.Clients.Remove(client);
+
+
+            return View("UpdateData");
+        }
+
     }
 }
