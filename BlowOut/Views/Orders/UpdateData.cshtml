@@ -1,14 +1,11 @@
 ﻿@model IEnumerable<BlowOut.Models.ClientOrders>
 
 @{
-    ViewBag.Title = "UpdateData";
+    ViewBag.Title = "Update Data";
 }
 
-<h2>UpdateData</h2>
+<h2>Update Data</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
     <tr>
         <th>
@@ -45,7 +42,7 @@
             @Html.DisplayNameFor(model => model.email)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.phoneNumber)
+            @Html.DisplayNameFor(model => model.phone)
         </th>
         <th></th>
     </tr>
@@ -86,7 +83,7 @@
             @Html.DisplayFor(modelItem => item.email)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.phoneNumber)
+            @Html.DisplayFor(modelItem => item.phone)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.instrumentID }) |

@@ -12,15 +12,15 @@ namespace BlowOut.Controllers
     {
         private RentalsContext db = new RentalsContext();
         // GET: Orders
-        public ActionResult Index()
+        public ActionResult UpdateData()
         {
             IEnumerable<ClientOrders> clientOrders =
                 db.Database.SqlQuery<ClientOrders>(
-                    "SELECT instrumentID, Description, type, price, clientID," +
-                        "firstName, lastName, address, city, state, zip, email, phone" +
-                    "FROM client, instruments" +
-                    "WHERE instruments.clientID = client.clientID" +
-                    "ORDER BY instrumentID"
+                    "SELECT instrumentID, Description, type, price, client.clientID, " +
+                        "firstName, lastName, address, city, state, zip, email, phone " +
+                    "FROM client, instruments " +
+                    "WHERE instruments.clientID = client.clientID " +
+                    "ORDER BY instrumentID;"
                     );
 
             return View(clientOrders);
