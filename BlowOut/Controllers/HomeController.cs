@@ -46,7 +46,7 @@ namespace BlowOut.Controllers
             String userName = form["UserName"].ToString();
             String password = form["Password"].ToString();
 
-            if (userName == "Missouri" && password == "ShowMe")
+            if ((string.Equals(userName, "Missouri")) && (string.Equals(password, "ShowMe")))
             {
                 FormsAuthentication.SetAuthCookie(userName, rememberMe);
 
