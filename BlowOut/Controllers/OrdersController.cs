@@ -17,7 +17,7 @@ namespace BlowOut.Controllers
         {
             IEnumerable<ClientOrders> clientOrders =
                 db.Database.SqlQuery<ClientOrders>(
-                    "SELECT instrumentID, Description, type, price, clientID, " +
+                    "SELECT instrumentID, Description, type, price, client.clientID, " +
                         "firstName, lastName, address, city, state, zip, email, phone " +
                     "FROM client, instruments " +
                     "WHERE instruments.clientID = client.clientID " +
