@@ -13,7 +13,7 @@ namespace BlowOut.Models
         public string Description { get; set; }
         public string Type { get; set; }
         public int Price { get; set; }
-        public int clientID { get; set; }
+        
         public string firstName { get; set; }
         public string lastName { get; set; }
         public string address { get; set; }

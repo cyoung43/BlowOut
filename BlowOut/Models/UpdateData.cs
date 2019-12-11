@@ -7,7 +7,7 @@ namespace BlowOut.Models
 {
     public class UpdateData
     {
-        public int clientID { get; set; }
+        
         public string clientFirstName { get; set; }
         public string clientLastName { get; set; }
         public string clientStreetAddress { get; set; }
