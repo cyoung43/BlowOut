@@ -7,6 +7,7 @@
 
 @using (Html.BeginForm("Login", "Home", FormMethod.Post))
 {
+    @Html.AntiForgeryToken()
     <p class="text-danger">@ViewBag.Valid</p>
     <label for="inputUserName">User Name</label><br />
     @Html.TextBox("UserName")

@@ -129,7 +129,7 @@ namespace BlowOut.Controllers
             Client client = db.Clients.Find(id);
             db.Clients.Remove(client);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("UpdateData", "Orders");
         }
 
         protected override void Dispose(bool disposing)

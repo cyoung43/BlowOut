@@ -12,15 +12,16 @@ namespace BlowOut.Controllers
     public class OrdersController : Controller
     {
         private RentalsContext db = new RentalsContext();
+        
         // GET: Orders
+        [Authorize]
         public ActionResult UpdateData()
         {
             IEnumerable<ClientOrders> clientOrders =
                 db.Database.SqlQuery<ClientOrders>(
-                    "SELECT instrumentID, Description, type, price, clientID, " +
+                    "SELECT instrumentID, Description, type, price, " +
                         "firstName, lastName, address, city, state, zip, email, phone " +
-                    "FROM client, instruments " +
-                    "WHERE instruments.clientID = client.clientID " +
+                    "FROM instruments LEFT JOIN client ON client.clientID = instruments.clientID " +                    
                     "ORDER BY instrumentID;"
                     );
 
@@ -32,9 +33,7 @@ namespace BlowOut.Controllers
             
             Instrument instrument = db.Instruments.Find(id);
 
-            int cID = instrument.ClientID;
-
-            Client client = db.Clients.Find(cID);
+            int? cID = instrument.ClientID;                      
 
             db.Database.ExecuteSqlCommand(
                 "UPDATE Instruments " +
@@ -42,10 +41,7 @@ namespace BlowOut.Controllers
                 "WHERE InstrumentID = " + id + ";"
                 );
 
-            db.Clients.Remove(client);
-
-
-            return View("UpdateData");
+            return RedirectToAction("Delete", "Clients", new { id = cID});
         }
 
     }
