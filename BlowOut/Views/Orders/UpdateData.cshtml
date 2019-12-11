@@ -82,7 +82,7 @@
             @Html.DisplayFor(modelItem => item.phone)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.instrumentID }) |
+            @Html.ActionLink("Edit", "Edit", "Clients", new { id=item.clientID }, null) |
             @Html.ActionLink("Details", "Details", new { id=item.instrumentID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.instrumentID })
         </td>
